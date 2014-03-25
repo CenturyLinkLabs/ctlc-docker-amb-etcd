@@ -9,4 +9,4 @@ RUN mv etcd-*/etcdctl /usr/bin
 RUN rm -rf etcd-*
 RUN chmod +x run.sh
 
-CMD	run.sh
+CMD	/run.sh
