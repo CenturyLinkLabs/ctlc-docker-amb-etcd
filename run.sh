@@ -10,6 +10,6 @@ while true
 do
 	etcdctl -C "http://172.17.42.1:4001/" set \
 		/services/${NAME:-$LOCAL_PORT} \
-		"{ \"host\": \"$HOSTNAME\", \"ip\": \"$LOCAL_HOST\", \"port\": $LOCAL_PORT, \"version\": \"${VERSION:-1}\" }" --ttl 60
+		"{ \"container_id\": \"$HOSTNAME\", \"local_ip\": \"$LOCAL_HOST\", \"port\": $LOCAL_PORT, \"version\": \"${VERSION:-1}\" }" --ttl 60
 	sleep 45
 done
